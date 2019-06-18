@@ -1,1 +1,1 @@
-# phyton-homework-1
+# phyton-homework-first week
