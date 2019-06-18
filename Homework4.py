@@ -1,0 +1,11 @@
+capital=input("Please enter total amount of capital\n")
+time=input("Please enter duration of interest rate (yearly)\n")
+interest_rate=input("Please enter interest rate\n")
+amount_of_interest=(float(capital)*float(time)*float(interest_rate))/100
+monthly=float(amount_of_interest)/(12*float(time))
+daily=float(amount_of_interest)/(360*float(time))
+total_amount=float(capital)+float(amount_of_interest)
+print("Total amount of interest","\n",amount_of_interest,"\n","Your monthly average amount of interest","\n",monthly,"\n","Your daily average amount of interest","\n",daily,"\n","Your total amount","\n",total_amount,sep="")
+new_file=open("Calculation of interest rate amount.txt","w")
+print("Total amount of interest","\n",amount_of_interest,"\n","Your monthly average amount of interest","\n",monthly,"\n","Your daily average amount of interest","\n",daily,"\n","Your total amount","\n",total_amount,sep="",file=new_file)
+new_file.close()

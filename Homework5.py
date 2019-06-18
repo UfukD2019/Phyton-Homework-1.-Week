@@ -1,0 +1,11 @@
+income=input("Please enter your monthly income\n")
+kitchen=input("Please enter your monthly kitchen expenses\n")
+education=input("Please enter your monthly education expenses\n")
+clothing=input("Please enter your monthly clothing expenses\n")
+transportation=input("Please enter your monthly transportation expenses\n")
+total_expenses=float(kitchen)+float(education)+float(clothing)+float(transportation)
+ratio=(float(total_expenses)/float(income))*100
+print("Your monthly total expenses\n",total_expenses,"\n","The ratio of expenses to income (percent)\n","%",ratio,sep="")
+new_file=open("Monthly expenses.txt","w")
+print("Your monthly total expenses\n",total_expenses,"\n","The ratio of expenses to income (percent)\n","%",ratio,sep="",file=new_file)
+new_file.close()
